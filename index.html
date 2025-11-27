@@ -27,7 +27,25 @@
 
     /* header */
     header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#001018;font-size:20px}
+    /*.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#001018;font-size:20px}
+    
+    */
+    .logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Remove the gradient */
+  background: url('my-logo.png') no-repeat center center;
+  background-size: cover; /* Make the image fill the container */
+  font-weight: 800;
+  color: transparent; /* Hide the text inside if any */
+  font-size: 20px;
+}
+
+    
     h1{font-size:20px;margin:0}
     p.lead{margin:0;color:var(--muted);font-size:13px}
 
@@ -81,7 +99,7 @@
     <header>
       <div class="logo">Daily</div>
       <div style="flex:1">
-        <h1>[Daily] — Routine & Habit Reminder</h1>
+        <h1>Routine & Habit Reminder</h1>
         <p class="lead">AMOLED • 24-hour time • Local-first</p>
       </div>
       <div style="display:flex;gap:8px;align-items:center">
@@ -622,6 +640,7 @@ resizeConfetti();
   </script>
 </body>
 </html>
+
 
 
 
