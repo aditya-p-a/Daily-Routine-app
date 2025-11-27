@@ -597,9 +597,31 @@
 
   // simple toast (console fallback)
   function showToast(msg){ console.log('Toast:', msg); }
+    // Resize chart dynamically
+function resizeChart(){
+  const chartCanvas = document.querySelector('#chart'); // or your chart ID
+  if(!chartCanvas) return;
+  chartCanvas.width = chartCanvas.parentElement.clientWidth - 20;
+  chartCanvas.height = 120; // or keep dynamic if needed
+  renderChart(); // call your existing render function
+}
+window.addEventListener('resize', resizeChart);
+resizeChart();
+
+// Resize confetti canvas
+function resizeConfetti(){ 
+  const confettiCanvas = document.querySelector('#confetti'); // your confetti canvas ID
+  if(!confettiCanvas) return;
+  confettiCanvas.width = window.innerWidth; 
+  confettiCanvas.height = window.innerHeight; 
+}
+window.addEventListener('resize', resizeConfetti); 
+resizeConfetti();
+
 
   </script>
 </body>
 </html>
+
 
 
