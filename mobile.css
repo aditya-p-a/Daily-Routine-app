@@ -1,0 +1,30 @@
+/* mobile.css */
+
+/* Adjust layout and spacing on small screens */
+@media(max-width:600px){
+  body { padding: 12px; }
+  .app { max-width: 100%; }
+
+  header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  header .btn { width: 100%; margin-top: 4px; }
+
+  .tabs { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .tabs .small { margin-left: 0; }
+
+  .grid { grid-template-columns: 1fr; gap: 12px; }
+  aside.sidebar { order: 2; width: 100%; }
+
+  .routine, .habit { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .routine .controls, .habit div[style*="display:flex;gap:8px"] { flex-wrap: wrap; gap: 4px; }
+  
+  input, select, button { font-size: 14px; padding: 8px; }
+}
+
+/* Touch-friendly buttons */
+button, .btn { min-height: 40px; font-size: 14px; }
+
+/* Bottom nav for mobile */
+@media(max-width:600px){
+  .mobile-nav { display:flex; position:fixed; bottom:0; width:100%; background:var(--panel); justify-content:space-around; padding:6px 0; }
+  aside.sidebar { display:none; }
+}
